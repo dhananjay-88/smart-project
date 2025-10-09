@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.mainContainer {
+  width: 360px;
+  height: 800px;
+  background: #ffffff;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 18px;
+  height: 60px; /* ← Increase height here */
+  flex-shrink: 0; /* Prevents flexbox from compressing the header */
+}
+
+
+
+.header h3 {
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+}
+
+.back-icon, .search-icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  filter: invert(81%) sepia(0%) saturate(0%) hue-rotate(179deg) brightness(93%) contrast(90%);
+}
+
+/* Stats Section */
+.stats-content {
+  padding: 15px 18px;
+}
+
+/* Tabs */
+.toggle-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.tab-btn {
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-size: 13px;
+  cursor: pointer;
+  color: #555;
+}
+
+.tab-btn.active {
+  background: #2F4C9E;
+  color: #fff;
+}
+
+/* Calendar */
+.calendar {
+  background: #fff;
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-header {
+  text-align: center;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  gap: 5px;
+}
+
+.calendar-grid div {
+  font-size: 12px;
+  color: #333;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.calendar-grid .selected {
+  background: #2F4C9E;
+  color: #fff;
+}
+
+/* Issues Section */
+.issues-section {
+  margin-top: 20px;
+}
+
+.issues-section h4 {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.issue-options {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+  margin-bottom: 8px;
+}
+
+.issue-options label {
+  font-size: 13px;
+  color: #555;
+}
+
+.issues-img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Alerts Section */
+.alerts-section {
+  margin-top: 20px;
+}
+
+.alerts-section h4 {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.alert-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.alert-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 60%;
+}
+
+.alert-info img {
+  width: 24px;
+  height: 24px;
+}
+
+.alert-info span {
+  font-size: 13px;
+  color: #333;
+}
+
+.bar {
+  flex-grow: 1;
+  height: 4px;
+  background: #ddd;
+  border-radius: 3px;
+  margin-left: 10px;
+}
+
+.bar.active {
+  background: #2F4C9E;
+}
+
+/* Footer (same style) */
+.footer {
+  height: 70px;
+  background: #fff;
+  border-top: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 10px;
+  color: #777;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-item img {
+  width: 20px;
+  height: 20px;
+  margin-bottom: 4px;
+  filter: invert(81%) sepia(0%) saturate(0%) hue-rotate(179deg) brightness(93%) contrast(90%);
+  transition: all 0.3s ease;
+}
+
+/* Active Footer */
+.nav-item.active {
+  transform: translateY(-15px);
+}
+
+.nav-item.active img {
+  filter: invert(18%) sepia(99%) saturate(7461%) hue-rotate(356deg) brightness(95%) contrast(107%);
+}
+
+.nav-item.active p {
+  color: #e60000;
+  font-weight: 500;
+}
+
+.nav-item.active:not(.home-btn)::before {
+  content: "";
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid #2F4C9E;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.nav-item.active:not(.home-btn) img {
+  position: relative;
+  top: 5px;
+  z-index: 1;
+}
+
+.nav-item.active:not(.home-btn) p {
+  margin-top: 36px;
+  position: relative;
+  z-index: 1;
+}
+
+.issues-img {
+  width: 100%;
+  border-radius: 10px;
+  transition: opacity 0.2s ease-in-out; /* Smooth fade effect */
+  opacity: 1;
+}

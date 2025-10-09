@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=360, initial-scale=1.0">
+    <title>Ask Smarty - Login page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="mainContainer">
+        <div class="container">
+            <!-- Logo -->
+            <div class="logo">
+                <img src="assets/AskSmarty.png" alt="App Logo">
+            </div>
+
+            <!-- Form -->
+            <form class="loginForm">
+                <!-- Username -->
+                <div class="inputBox">
+                    <img src="assets/user.svg" alt="User Icon" class="icon">
+                    <input type="text" id="usernamePage2" placeholder="Username" required>
+                </div>
+
+                <!-- Employee Group -->
+                <div class="inputBox">
+                    <img src="assets/multiuser.svg" alt="Employee Icon" class="icon">
+                    <select id="employeeSelect" required>
+                        <option value="" disabled selected>Employee Group</option>
+                        <option value="frontline">Frontline Staff</option>
+                        <option value="incharge">Incharge</option>
+                        <option value="manager">Manager</option>
+                    </select>
+                </div>
+
+                <!-- Location -->
+                <div class="inputBox">
+                    <img src="assets/location.svg" alt="Location Icon" class="icon">
+                    <select id="locationSelect" required>
+                        <option value="" disabled selected>Store Details</option>
+                        <option value="hadapsar">Hadapsar</option>
+                        <option value="pimpri">Pimpri</option>
+                        <option value="hinjewadi">Hinjewadi</option>
+                        <option value="kothrud">Kothrud</option>
+                        <option value="baner">Baner</option>
+                        <option value="wakad">Wakad</option>
+                        <option value="viman-nagar">Viman Nagar</option>
+                        <option value="navi-pune">Navi Pune</option>
+                    </select>
+                </div>
+
+
+                <!-- Login Button -->
+                <button type="submit" class="login-btn">LOGIN</button>
+            </form>
+        </div>
+
+        <!-- Bottom red section -->
+        <div class="bottom-section"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

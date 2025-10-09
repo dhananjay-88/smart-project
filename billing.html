@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Billing Counter</title>
+    <link rel="stylesheet" href="billing.css" />
+</head>
+
+<body>
+    <div class="mainContainer">
+        <!-- Header -->
+        <div class="header">
+            <img src="assets/back.svg" alt="Back" class="back-icon" onclick="window.location.href='inhouse.html'" />
+
+            <h3>Billing Counter</h3>
+            <img src="assets/search (3).svg" alt="Search" class="search-icon" />
+        </div>
+
+        <!-- Content -->
+        <div class="content billing-content">
+            <div class="billing-img">
+                <img src="assets/billing/Bill counter Visual (1).png" alt="Billing Illustration" />
+            </div>
+
+            <div class="incharge-info">
+                <div class="left">
+                    <img src="assets/billing/Rohan mehta.png" alt="User" class="avatar" />
+                    <div>
+                        <p class="staff-in-charge">Staff In Charge</p>
+                        <h4>Rohan Mehta</h4>
+                        <p>Today's Task</p>
+                    </div>
+                </div>
+                <div class="right">
+                    <p>Total Staff</p>
+                    <h5>11/11</h5>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button class="primary">Allot In-charge</button>
+                <button class="secondary" id="openPopupBtn">Assign Task</button>
+            </div>
+
+            <div class="staff-section">
+                <h4 class="section-title">About Staff</h4>
+                <hr class="section-divider" />
+                <div class="staff-list">
+                    <div class="staff-card">
+                        <div class="staff-info">
+                            <img src="assets/billing/img1.png" alt="User" class="avatar" />
+                            <div>
+                                <h5>Vivek Nayar</h5>
+                                <p>Today's Task</p>
+                            </div>
+                        </div>
+                        <button class="outline">Allot other task</button>
+                    </div>
+
+                    <div class="staff-card">
+                        <div class="staff-info">
+                            <img src="assets/billing/img2.png" alt="User" class="avatar" />
+                            <div>
+                                <h5>Abhishek Singh</h5>
+                                <p>Today's Task</p>
+                            </div>
+                        </div>
+                        <button class="outline">Allot other task</button>
+                    </div>
+
+                    <div class="staff-card">
+                        <div class="staff-info">
+                            <img src="assets/billing/img3.png" alt="User" class="avatar" />
+                            <div>
+                                <h5>Kumar Gupta</h5>
+                                <p>Today's Task</p>
+                            </div>
+                        </div>
+                        <button class="outline">Allot other task</button>
+                    </div>
+
+                    <div class="staff-card">
+                        <div class="staff-info">
+                            <img src="assets/billing/img4.png" alt="User" class="avatar" />
+                            <div>
+                                <h5>Avanti Kadam</h5>
+                                <p>Today's Task</p>
+                            </div>
+                        </div>
+                        <button class="outline">Allot other task</button>
+                    </div>
+
+                    <div class="staff-card">
+                        <div class="staff-info">
+                            <img src="assets/billing/img5.png" alt="User" class="avatar" />
+                            <div>
+                                <h5>Murali Yadav</h5>
+                                <p>Today's Task</p>
+                            </div>
+                        </div>
+                        <button class="outline">Allot other task</button>
+                    </div>
+
+                    <div class="staff-card">
+                        <div class="staff-info">
+                            <img src="assets/billing/img6.png" alt="User" class="avatar" />
+                            <div>
+                                <h5>Ankita Khanke</h5>
+                                <p>Today's Task</p>
+                            </div>
+                        </div>
+                        <button class="outline">Allot other task</button>
+                    </div>
+
+                    <div class="staff-card">
+                        <div class="staff-info">
+                            <img src="assets/billing/img7.png" alt="User" class="avatar" />
+                            <div>
+                                <h5>Rupesh Adhav</h5>
+                                <p>Today's Task</p>
+                            </div>
+                        </div>
+                        <button class="outline">Allot other task</button>
+                    </div>
+
+                    <div class="staff-card">
+                        <div class="staff-info">
+                            <img src="assets/billing/img8.png" alt="User" class="avatar" />
+                            <div>
+                                <h5>Avinash Shah</h5>
+                                <p>Today's Task</p>
+                            </div>
+                        </div>
+                        <button class="outline">Allot other task</button>
+                    </div>
+
+                    <div class="staff-card">
+                        <div class="staff-info">
+                            <img src="assets/billing/img9.png" alt="User" class="avatar" />
+                            <div>
+                                <h5>Gauri Kale</h5>
+                                <p>Today's Task</p>
+                            </div>
+                        </div>
+                        <button class="outline">Allot other task</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="nav-item"><img src="assets/complain.svg" alt="Complaint" />
+                <p>Complaint</p>
+            </div>
+            <div class="nav-item"><img src="assets/bell.svg" alt="Notification" />
+                <p>Notification</p>
+            </div>
+            <div class="nav-item home-btn">
+                <div class="home-icon-container"><img src="assets/Home Icon.svg" alt="Home" /></div>
+                <p>Home</p>
+            </div>
+            <div class="nav-item"><img src="assets/stats-chart.svg" alt="To do list" />
+                <p>To do list</p>
+            </div>
+            <div class="nav-item"><img src="assets/review.svg" alt="Statistics" />
+                <p>Statistics</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ✅ Popup Window -->
+    <div id="assignTaskPopup" class="popup-overlay">
+        <div class="popup-box">
+            <h3>Assign Task</h3>
+
+            <div class="priority-options">
+                <label><input type="radio" name="priority" /> High Priority</label>
+                <label><input type="radio" name="priority" /> Complete in a Day</label>
+            </div>
+
+            <div class="task-lines">
+                <input type="text" placeholder="Write task information here..." />
+                <input type="text" />
+            </div>
+
+            <div class="popup-buttons">
+                <button class="cancel-btn" id="cancelBtn">Cancel</button>
+                <button class="assign-btn">Assign</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ✅ Success Popup -->
+    <div id="successPopup" class="popup-overlay">
+        <div class="popup-box success-box">
+            <img src="assets/billing/checkmark-circle.png" alt="Tick" class="tick-img" />
+            <h3>Task Assigned Successfully!</h3>
+            <p class="success-msg">The task has been successfully assigned to the staff.</p>
+        </div>
+    </div>
+    <!-- ✅ Allot In-Charge Popup -->
+    <div id="allotInchargePopup" class="popup-overlay">
+        <div class="popup-box allot-popup">
+            <h3>Allot In-Charge</h3>
+
+            <!-- Tabs -->
+            <div class="tab-buttons">
+                <button class="tab-btn active" data-tab="fromSection">From Section</button>
+                <button class="tab-btn" data-tab="otherSection">Other Section</button>
+            </div>
+
+            <!-- Tab Contents -->
+            <div class="tab-content fromSection active"></div>
+            <div class="tab-content otherSection"></div>
+
+            <!-- Assign Button -->
+            <div class="popup-buttons">
+                <button class="cancel-btn" id="closeAllotPopup">Cancel</button>
+                <button class="assign-btn" id="allotAssignBtn">Assign</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="billing.js"></script>
+</body>
+
+</html>

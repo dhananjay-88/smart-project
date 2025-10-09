@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ask Smarty - Message</title>
+    <link rel="stylesheet" href="message.css" />
+</head>
+
+<body>
+    <div class="mainContainer">
+        <!-- Header -->
+        <div class="header">
+            <img src="assets/back.svg" alt="Back" class="back-icon" onclick="window.location.href='landing.html'" />
+            <h3>MESSAGE</h3>
+            <img src="assets/search (3).svg" alt="Search" class="search-icon" />
+        </div>
+
+        <!-- Scrollable Message Content -->
+        <div class="content">
+            <div class="tabs">
+                <button class="tab active">Mail</button>
+                <button class="tab">Chat</button>
+            </div>
+
+            <!-- Inbox Section -->
+            <div class="section-label">Inbox</div>
+
+            <div class="email-items inbox-items">
+                <div class="email-item">
+                    <div class="avatar" style="background-color: #4169E1;">L</div>
+                    <div class="email-content">
+                        <div class="email-header">
+                            <span class="sender">Local Security Agency</span>
+                            <span class="date">29 Mar</span>
+                        </div>
+                        <div class="preview">Security Measures Update - Q1 October Attached...</div>
+                    </div>
+                </div>
+                <div class="email-item">
+                    <div class="avatar" style="background-color: #8B4513;">P</div>
+                    <div class="email-content">
+                        <div class="email-header">
+                            <span class="sender">Pest Control Services</span>
+                            <span class="date">29 Mar</span>
+                        </div>
+                        <div class="preview">Pest Control Service Report - Bi Weekly Visit Comple...</div>
+                    </div>
+                </div>
+                <div class="email-item">
+                    <div class="avatar" style="background-color: #FFD700;">S</div>
+                    <div class="email-content">
+                        <div class="email-header">
+                            <span class="sender">Store IT Support</span>
+                            <span class="date">28 Mar</span>
+                        </div>
+                        <div class="preview">Re: POS Terminal Fix - Remote Diagnostics Complete...</div>
+                    </div>
+                </div>
+                <div class="email-item">
+                    <div class="avatar" style="background-color: #6A5ACD;">M</div>
+                    <div class="email-content">
+                        <div class="email-header">
+                            <span class="sender">Maintenance Team</span>
+                            <span class="date">28 Mar</span>
+                        </div>
+                        <div class="preview">Monthly Maintenance Checklist - Completed Tasks...</div>
+                    </div>
+                </div>
+
+                <!-- Hidden extra emails -->
+                <div class="email-item extra">
+                    <div class="avatar" style="background-color: #2E8B57;">C</div>
+                    <div class="email-content">
+                        <div class="email-header">
+                            <span class="sender">Cleaning Services</span>
+                            <span class="date">27 Mar</span>
+                        </div>
+                        <div class="preview">Weekly Cleaning Report - Stores and Offices...</div>
+                    </div>
+                </div>
+                <div class="email-item extra">
+                    <div class="avatar" style="background-color: #FF8C00;">T</div>
+                    <div class="email-content">
+                        <div class="email-header">
+                            <span class="sender">Transport Department</span>
+                            <span class="date">27 Mar</span>
+                        </div>
+                        <div class="preview">Delivery Schedule Update - Trucks Assigned...</div>
+                    </div>
+                </div>
+            </div>
+            <button class="toggle-btn inbox-toggle">Show More ▼</button>
+
+            <!-- Sent Section -->
+            <div class="section-label">Sent</div>
+
+            <div class="email-items sent-items">
+                <div class="email-item">
+                    <div class="avatar" style="background-color: #6B5B95;">H</div>
+                    <div class="email-content">
+                        <div class="email-header">
+                            <span class="sender">To: HUL (FMCG Supplier)</span>
+                            <span class="date">29 Mar</span>
+                        </div>
+                        <div class="preview">Festive Offer Promo Sheet - Q3 Materialization...</div>
+                    </div>
+                    <div class="star-container">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
+                                stroke="#666" stroke-width="2" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="email-item">
+                    <div class="avatar" style="background-color: #4A90E2;">A</div>
+                    <div class="email-content">
+                        <div class="email-header">
+                            <span class="sender">To: Amul Dairy</span>
+                            <span class="date">29 Mar</span>
+                        </div>
+                        <div class="preview">Confirming Tomorrow's Delivery Window For Milk...</div>
+                    </div>
+                    <div class="star-container">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
+                                stroke="#666" stroke-width="2" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="email-item">
+                    <div class="avatar" style="background-color: #7CB342;">E</div>
+                    <div class="email-content">
+                        <div class="email-header">
+                            <span class="sender">To: Fresh Produce Vendor</span>
+                            <span class="date">28 Mar</span>
+                        </div>
+                        <div class="preview">Inquiry: Availability And Price For 50kg Activiti...</div>
+                    </div>
+                    <div class="star-container">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
+                                stroke="#666" stroke-width="2" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="email-item">
+                    <div class="avatar" style="background-color: #D32F2F;">R</div>
+                    <div class="email-content">
+                        <div class="email-header">
+                            <span class="sender">To: Reliance Distribution Center (DC)</span>
+                            <span class="date">28 Mar</span>
+                        </div>
+                        <div class="preview">Requesting Early Delivery Slot For Re-Stock...</div>
+                    </div>
+                </div>
+
+                <!-- Hidden extra emails -->
+                <div class="email-item extra">
+                    <div class="avatar" style="background-color: #FF69B4;">F</div>
+                    <div class="email-content">
+                        <div class="email-header">
+                            <span class="sender">To: Fashion Supplier</span>
+                            <span class="date">27 Mar</span>
+                        </div>
+                        <div class="preview">Order Confirmation - Apparel Collection...</div>
+                    </div>
+                    <div class="star-container">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
+                                stroke="#666" stroke-width="2" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <button class="toggle-btn sent-toggle">Show More ▼</button>
+
+            <!-- Chat Section -->
+            <div class="chat-items-container" style="display: none;">
+                <div class="chat-tabs">
+                    <button class="chat-tab active">Recent</button>
+                    <button class="chat-tab">Groups</button>
+                    <button class="chat-tab">Vendors</button>
+                </div>
+
+                <div class="chat-list">
+                    <div class="chat-item">
+                        <div class="chat-avatar" style="background-color: #4A90E2;">S</div>
+                        <div class="chat-content">
+                            <div class="chat-header">
+                                <span class="chat-name">Store Manager</span>
+                                <span class="chat-time">2:45 PM</span>
+                            </div>
+                            <div class="chat-preview">Please confirm restock request before 5PM...</div>
+                        </div>
+                        <div class="chat-unread-badge">3</div>
+                    </div>
+
+                    <div class="chat-item">
+                        <div class="chat-avatar" style="background-color: #E91E63;">T</div>
+                        <div class="chat-content">
+                            <div class="chat-header">
+                                <span class="chat-name">Transport Team</span>
+                                <span class="chat-time">1:30 PM</span>
+                            </div>
+                            <div class="chat-preview">Truck #12 has been delayed due to traffic...</div>
+                        </div>
+                    </div>
+
+                    <div class="chat-item">
+                        <div class="chat-avatar" style="background-color: #7CB342;">V</div>
+                        <div class="chat-content">
+                            <div class="chat-header">
+                                <span class="chat-name">Vegetable Vendor</span>
+                                <span class="chat-time">Today</span>
+                            </div>
+                            <div class="chat-preview">Sending updated price list for this week...</div>
+                        </div>
+                        <div class="chat-unread-badge">1</div>
+                    </div>
+
+                    <div class="chat-item">
+                        <div class="chat-avatar" style="background-color: #9C27B0;">C</div>
+                        <div class="chat-content">
+                            <div class="chat-header">
+                                <span class="chat-name">Cleaning Services</span>
+                                <span class="chat-time">Yesterday</span>
+                            </div>
+                            <div class="chat-preview">Weekly cleanup schedule has been updated...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Store Manager Chat UI -->
+            <div class="chat-screen">
+                <div class="chat-header">
+                    <div class="chat-user">
+                        <img src="assets/billing/Ishita Desai.png" alt="User" class="chat-user-img" />
+                        <div class="chat-user-info">
+                            <h4>Ankita Khankhaje</h4>
+                            <p>Store manager</p>
+                        </div>
+                    </div>
+                    <div class="chat-options">
+                        <img src="assets/ellipsis-vertical.svg" alt="Options" class="chat-menu-icon" />
+                    </div>
+                </div>
+
+                <div class="chat-body">
+                    <div class="date-label">Fri, Jan 26</div>
+
+                    <div class="message received">
+                        <div class="file-attachment">
+                            <div class="file-name">IMG_0483</div>
+                            <div class="file-size">2.8 MB · png</div>
+                            <div class="time">11:40</div>
+                        </div>
+                        <div class="text">Sir received the order.</div>
+                        <div class="time">11:40</div>
+                    </div>
+
+                    <div class="message sent">
+                        <div class="text">Noted.</div>
+                        <div class="time">12:47</div>
+                    </div>
+
+                    <div class="date-label">Today</div>
+
+                    <div class="message received action-box">
+                        <div class="text">
+                            Order Papers Rolls Set For All Counter, Something Is Wrong With Last Order Placement. Boxes
+                            Not Delivered Yet.
+                        </div>
+                        <div class="reminder-time">🕔 05:00</div>
+                        <div class="action-buttons">
+                            <button class="take-action">Take action</button>
+                            <button class="schedule-later">Schedule later</button>
+                        </div>
+                    </div>
+
+                    <div class="message sent">
+                        <div class="text">Communicate with Warehouse</div>
+                        <div class="time">05:10</div>
+                    </div>
+                </div>
+
+                <div class="chat-input">
+                    <input type="text" placeholder="Send Message" />
+                    <button class="send-btn">
+                        <img src="assets/send.png" alt="Send" />
+                    </button>
+                </div>
+            </div>
+
+
+
+
+            <!-- Footer -->
+            <div class="footer">
+                <div class="nav-item message-btn active">
+                    <img src="assets/message.svg" alt="Message" />
+                    <p>Message</p>
+                </div>
+                <div class="nav-item notification-btn">
+                    <img src="assets/bell.svg" alt="Notification" />
+                    <p>Notification</p>
+                </div>
+                <div class="nav-item home-btn">
+                    <div class="home-icon-container">
+                        <img src="assets/Home Icon.svg" alt="Home" />
+                    </div>
+                    <p>Home</p>
+                </div>
+                <div class="nav-item todo-btn">
+                    <img src="assets/review.svg" alt="To do list" />
+                    <p>To do list</p>
+                </div>
+                <div class="nav-item stats-btn">
+                    <img src="assets/stats-chart.svg" alt="Statistics" />
+                    <p>Statistics</p>
+                </div>
+            </div>
+        </div>
+
+        <script src="message.js"></script>
+        <script src="message-toggle.js"></script>
+</body>
+
+</html>

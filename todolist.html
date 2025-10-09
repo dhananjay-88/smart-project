@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ask Smarty - To do list</title>
+    <link rel="stylesheet" href="todolist.css" />
+</head>
+
+<body>
+    <div class="mainContainer">
+        <!-- Header -->
+        <div class="header">
+            <img src="assets/back.svg" alt="Back" class="back-icon" onclick="window.location.href='landing.html'" />
+            <h3>To do list</h3>
+            <img src="assets/search (3).svg" alt="Search" class="search-icon" />
+        </div>
+
+        <!-- To-Do List Content -->
+        <div class="content">
+            <div class="profile-section">
+                <div class="profile-initial">V</div>
+                <div class="profile-details">
+                    <h4>Vishnu Vasu</h4>
+                    <p>Stock Manager</p>
+                </div>
+            </div>
+
+            <div class="priority-task">
+                <h5>Today's Priority Task</h5>
+                <label class="task-option">
+                    <input type="radio" name="priority" />
+                    <span>Analyzing Historical Sales Data And Trends To Set Reorder Points (MBQ).</span>
+                </label>
+                <label class="task-option">
+                    <input type="radio" name="priority" checked />
+                    <span>Optimizing Manpower Allocation For The Entire Department</span>
+                </label>
+            </div>
+
+            <div class="tasks-today">
+                <h5>Tasks Scheduled For Today</h5>
+
+                <div class="task-card green">
+                    <p class="task-desc">
+                        Product [SKU]. Below Threshold. Please Restock From Go-Down Within 30 Mins
+                    </p>
+                    <p class="task-alert">Alert From: In-Charge</p>
+                    <div class="task-footer">
+                        <p class="task-date">23rd Mar 2025</p>
+                        <button class="take-action">Take action</button>
+                    </div>
+                </div>
+
+                <div class="task-card yellow">
+                    <p class="task-desc">
+                        [SKU] Is Selling 20% Faster Than Forecast. Order Quantity May Need Adjustment.
+                    </p>
+                    <p class="task-alert">Alert From: In-Charge</p>
+                    <div class="task-footer">
+                        <p class="task-date">23rd Mar 2025</p>
+                        <button class="take-action">Take action</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tasks-tomorrow">
+                <h5>Tasks Scheduled For Tomorrow</h5>
+                <ul>
+                    <li>Order Papers Rolls Set For All Counter, Some...</li>
+                    <li>Ensuring Stock Is Received, Verified, And Moved To The Correct Area.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="nav-item message-btn">
+                <img src="assets/message.svg" alt="Message" />
+                <p>Message</p>
+            </div>
+            <div class="nav-item notification-btn">
+                <img src="assets/bell.svg" alt="Notification" />
+                <p>Notification</p>
+            </div>
+            <div class="nav-item home-btn">
+                <div class="home-icon-container">
+                    <img src="assets/Home Icon.svg" alt="Home" />
+                </div>
+                <p>Home</p>
+            </div>
+            <div class="nav-item todo-btn active">
+                <img src="assets/review.svg" alt="To do list" />
+                <p>To do list</p>
+            </div>
+            <div class="nav-item stats-btn active">
+                <img src="assets/stats-chart.svg" alt="Statistics" />
+                <p>Statistics</p>
+            </div>
+        </div>
+
+
+        <script src="todolist.js"></script>
+</body>
+
+</html>
