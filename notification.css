@@ -1,0 +1,729 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.mainContainer {
+  width: 360px;
+  height: 800px;
+  background: #ffffff;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  position: relative;
+}
+
+.header {
+  /* same as message */
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 18px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.header h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.back-icon,
+.search-icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  filter: invert(81%) sepia(0%) saturate(0%) hue-rotate(179deg) brightness(93%) contrast(90%);
+}
+
+/* Content */
+.content {
+  flex: 1;
+  overflow-y: auto;
+  background: #fff;
+  padding: 10px 16px;
+}
+
+/* Alert Section */
+.alert-section {
+  background: #fff;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.alert-section h4 {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.alert-sendto p {
+  font-size: 13px;
+  margin-bottom: 4px;
+  color: #555;
+}
+
+.radio-group label {
+  margin-right: 10px;
+  font-size: 13px;
+  color: #333;
+}
+
+.priority-levels {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.priority {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  color: #333;
+}
+
+.priority img {
+  width: 28px;
+  height: 28px;
+  margin-bottom: 4px;
+}
+
+/* Notification Cards */
+.received-section h4 {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 14px 0 10px;
+  color: #333;
+}
+
+.notification-card {
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.notification-card.high {
+  background: #ffecec;
+}
+
+.notification-card.mid {
+  background: #e8fff2;
+}
+
+.notification-card.low {
+  background: #f4f4f4;
+}
+
+.notification-card.other {
+  background: #fff8f2;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile .info {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.profile .name {
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
+}
+
+.profile .role {
+  font-size: 12px;
+  color: #777;
+}
+
+.profile .time {
+  font-size: 12px;
+  color: #555;
+}
+
+.message {
+  font-size: 13px;
+  color: #333;
+  margin-top: 8px;
+}
+
+.take-action,
+.schedule-later {
+  margin-top: 10px;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.take-action {
+  background: #e74c3c;
+  color: #fff;
+}
+
+.schedule-later {
+  background: #fff;
+  color: #e74c3c;
+  border: 1px solid #e74c3c;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* Avatar for company notification */
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.avatar.orange {
+  background: #e67e22;
+}
+
+/* Footer (copied from message.css for consistency) */
+.footer {
+  height: 70px;
+  background: #fff;
+  border-top: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 10px;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 10px;
+  color: #777;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.nav-item img {
+  width: 20px;
+  height: 20px;
+  margin-bottom: 4px;
+  filter: invert(81%) sepia(0%) saturate(0%) hue-rotate(179deg) brightness(93%) contrast(90%);
+  transition: all 0.3s ease;
+}
+
+/* Active styles same as message page */
+.nav-item.active img {
+  filter: invert(18%) sepia(99%) saturate(7461%) hue-rotate(356deg) brightness(95%) contrast(107%);
+}
+
+.nav-item.active p {
+  color: #e60000;
+  font-weight: 500;
+}
+
+.nav-item.active:not(.home-btn)::before {
+  content: "";
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid #2F4C9E;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.nav-item.active:not(.home-btn) img {
+  position: relative;
+  top: 5px;
+  z-index: 1;
+}
+
+.nav-item.active:not(.home-btn) p {
+  margin-top: 36px;
+  position: relative;
+  top: 0;
+}
+
+/* Box container for alert messages */
+.alert-box {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  padding: 12px;
+  margin-top: 10px;
+}
+
+/* Adjust profile layout for vertical info */
+.profile {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-profile {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.alert-icon {
+  width: 22px;
+  height: 22px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-left: 8px;
+}
+
+.info .designation {
+  font-size: 13px;
+  color: #2F4C9E; /* blue for designation */
+  font-weight: 500;
+}
+
+.info .name {
+  font-weight: 700;
+  color: #000;
+  font-size: 14px;
+}
+
+.info .role {
+  font-size: 12px;
+  color: #777;
+}
+
+/* --- Adjust alert icon size in profile section --- */
+.notification-card.high .profile img.alert-icon,
+.notification-card.mid .profile img.alert-icon {
+  width: 20px;
+  height: 20px;
+  margin-left: 6px;
+  margin-top: 2px;
+}
+
+/* --- Gradient backgrounds for alert cards --- */
+.notification-card.high {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(225, 53, 48, 0.25) 100%);
+  border: 1px solid rgba(225, 53, 48, 0.4);
+}
+
+.notification-card.mid {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(34, 223, 40, 0.25) 100%);
+  border: 1px solid rgba(34, 223, 40, 0.4);
+}
+
+/* --- Styled Radio Buttons --- */
+.radio-group {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.radio-group label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  color: #333;
+  cursor: pointer;
+  user-select: none;
+}
+
+.radio-group input[type="radio"] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #007bff;
+  border-radius: 50%;
+  margin-right: 8px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.radio-group input[type="radio"]:checked {
+  border-color: #007bff;
+  background-color: #007bff;
+}
+
+.radio-group input[type="radio"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+}
+
+.radio-group input[type="radio"]:hover {
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.4);
+}
+
+/* --- Take Action Button Styling --- */
+.take-action {
+  background-color: #E8604E;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.take-action:hover {
+  background-color: #E13530;
+  transform: scale(1.03);
+}
+
+/* --- Take Action Popup Styles --- */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.popup-container {
+    position: relative; 
+  background: white;
+  width: 85%;
+  max-width: 320px; /* reduced from 400px */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  padding: 18px;
+  text-align: left;
+  color: #777;
+  animation: popupFadeIn 0.3s ease;
+}
+
+.allot-button {
+  position: absolute;
+  bottom: 16px;  /* some padding from bottom */
+  right: 16px;   /* some padding from right */
+  /* Add other button styles if needed */
+}
+
+.popup-container h3 {
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #333;
+  font-weight: 600;
+}
+
+.divider {
+  height: 1px;
+  background-color: #ddd;
+  margin: 5px 0;
+}
+
+.popup-option {
+  font-size: 14px;
+  padding: 10px 0;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.popup-option:hover {
+  background-color: rgba(248, 235, 203, 0.25);
+}
+
+@keyframes popupFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.staff-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.staff-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  background-color: #fafafa;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  transition: background 0.2s;
+}
+
+.staff-card:hover {
+  background-color: #f3f3f3;
+}
+
+.staff-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.staff-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
+}
+
+.staff-name {
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+}
+
+.staff-role {
+  font-size: 12px;
+  color: #777;
+}
+
+/* Radio on right */
+.staff-card input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #E8604E;
+  cursor: pointer;
+}
+
+/* ... (Existing styles remain unchanged) ... */
+
+/* --- Alert Sent Popup Styles (Image 1) --- */
+.alert-sent-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 18px;
+    text-align: center;
+}
+
+.success-icon-container {
+    width: 60px;
+    height: 60px;
+    background-color: #2ecc71; /* Green color from image */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.success-icon {
+    width: 30px;
+    height: 30px;
+    /* This assumes you have a white check-mark SVG */
+    /* If not, you might need to use a different method or image asset */
+    filter: invert(100%);
+}
+
+.alert-sent-text {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+}
+
+.alert-sent-text #staffNameDisplay {
+    font-weight: 700;
+}
+
+/* --- Progress Bar and Track Button (Image 2) --- */
+.alert-progress-container {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0 0;
+}
+
+.alert-progress-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 10px;
+    margin-bottom: 15px;
+}
+
+.alert-progress-bar::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #ddd;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ddd;
+    position: relative;
+    z-index: 2;
+    transition: background-color 0.5s ease;
+}
+
+.dot.active {
+    background-color: #E8604E; /* Red color */
+}
+
+/* Special styling for the second dot to show the "active" progress */
+.alert-progress-bar .dot:nth-child(2).active ~ .dot {
+    background-color: #ddd; /* Ensure dots after active one are grey */
+}
+
+/* The actual "Track Alert" button */
+.track-alert-button {
+    background-color: #E8604E; /* Red color */
+    color: white;
+    border: none;
+    padding: 8px 30px; /* Wider padding */
+    border-radius: 20px; /* Pill shape */
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(232, 96, 78, 0.4); /* Subtle shadow */
+    margin-top: 5px;
+}
+
+/* Hide original button, show new container */
+#highAlertCard button.take-action {
+    display: none; /* Hide the initial 'Take Action' button */
+}
+
+/* --- Action Taken Timeline (Image 3) --- */
+.action-taken-section {
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.action-taken-section h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 20px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 4px;
+    width: 2px;
+    height: 100%;
+    background-color: #ddd;
+}
+
+.timeline-step {
+    margin-bottom: 20px;
+    position: relative;
+    opacity: 0; /* Hidden initially */
+    transition: opacity 0.5s ease;
+}
+
+.timeline-step.visible {
+    opacity: 1;
+}
+
+.timeline-step::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: -16px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #2F4C9E; /* Blue dot */
+    border: 2px solid white;
+    box-shadow: 0 0 0 2px #2F4C9E;
+    z-index: 10;
+}
+
+.timeline-step-title {
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+}
+
+.timeline-step-detail {
+    font-size: 12px;
+    color: #777;
+    margin-top: 2px;
+}
+

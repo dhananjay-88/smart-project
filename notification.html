@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ask Smarty - Notification</title>
+    <link rel="stylesheet" href="notification.css" />
+</head>
+
+<body>
+    <div class="mainContainer"> <!-- Header -->
+        <div class="header"> <img src="assets/back.svg" alt="Back" class="back-icon"
+                onclick="window.location.href='landing.html'" />
+            <h3>NOTIFICATION</h3> <img src="assets/search (3).svg" alt="Search" class="search-icon" />
+        </div> <!-- Content -->
+        <div class="content"> <!-- Alert Messages -->
+            <div class="alert-section">
+                <h4>Alert Messages</h4> <!-- Box container with shadow -->
+                <div class="alert-box">
+                    <div class="alert-sendto">
+                        <div class="sendto-option">
+                            <p>Send To</p>
+                            <div class="radio-group"> <label><input type="radio" name="sendto" checked /> Staff
+                                    In-Charge</label> <label><input type="radio" name="sendto" /> Stock Manager</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="priority-levels">
+                        <div class="priority high"> <img src="assets/Property 1=High alert.png" alt="High" />
+                            <p>High</p>
+                        </div>
+                        <div class="priority mid"> <img src="assets/Property 1=Mid alert.png" alt="Mid" />
+                            <p>Mid</p>
+                        </div>
+                        <div class="priority low"> <img src="assets/Property 1=Low alert.png" alt="Low" />
+                            <p>Low</p>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- Received Messages -->
+            <div class="received-section">
+                <h4>Received</h4> <!-- High Alert Card -->
+                <div class="notification-card high">
+                    <div class="profile">
+                        <div class="left-profile"> <img src="assets/billing/Aadhya Patel.png" alt="Aadhya Patel" /> <img
+                                src="assets/Property 1=High alert.png" class="alert-icon" alt="High Alert" /> </div>
+                        <div class="info">
+                            <p class="designation">Staff In-Charge</p>
+                            <p class="name">Aadhya Patel</p>
+                            <p class="role">Dairy & Frozen Items</p>
+                        </div> <span class="time">07:00</span>
+                    </div>
+                    <p class="message">Need Urgent Help To Reload The Stock</p> <button class="take-action">Take
+                        action</button>
+                </div> <!-- Mid Alert Card -->
+                <div class="notification-card mid">
+                    <div class="profile">
+                        <div class="left-profile"> <img src="assets/billing/Myra desai.png" alt="Ankita Khankhaje" />
+                            <img src="assets/Property 1=Low alert.png" class="alert-icon" alt="Low Alert" />
+                        </div>
+                        <div class="info">
+                            <p class="designation">Frontline Staff</p>
+                            <p class="name">Ankita Khankhaje</p>
+                            <p class="role">Billing Counter</p>
+                        </div> <span class="time">05:00</span>
+                    </div>
+                    <p class="message">Order Papers Rolls Set For All Counter, Some Are Missing.</p>
+                    <div class="actions"> <button class="take-action">Take action</button> <button
+                            class="schedule-later">Schedule later</button> </div>
+                </div> <!-- Low Alert Card -->
+                <div class="notification-card low">
+                    <div class="profile">
+                        <div class="left-profile"> <img src="assets/billing/Myra desai.png" alt="Ankita Khankhaje" />
+                        </div>
+                        <div class="info">
+                            <p class="designation">Frontline Staff</p>
+                            <p class="name">Ankita Khankhaje</p>
+                            <p class="role">Billing Counter</p>
+                        </div> <span class="time">05:00</span>
+                    </div>
+                </div> <!-- Other -->
+                <div class="notification-card other">
+                    <div class="profile">
+                        <div class="avatar orange">S</div>
+                        <div class="info">
+                            <p class="name">Stainless Companies</p>
+                            <p class="role">Anup Jadolja</p>
+                        </div> <span class="time">10:00</span>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- Take Action Popup -->
+        <div id="takeActionPopup" class="popup-overlay">
+            <div class="popup-container">
+                <h3>Take Action</h3>
+                <div class="divider"></div>
+                <div class="popup-option">Allot staff through In-charge</div>
+                <div class="divider"></div>
+                <div class="popup-option">Order Stock</div>
+                <div class="divider"></div>
+                <div class="popup-option">Raise a complaint</div>
+            </div>
+        </div> <!-- Allot Staff Popup -->
+        <!-- Allot Staff Popup -->
+        <div id="allotStaffPopup" class="popup-overlay">
+            <div class="popup-container" style="max-height: 80vh; overflow-y: auto;">
+                <h3>Allot Staff Through In-Charge</h3>
+                <div class="divider"></div> <!-- Staff List -->
+                <div class="staff-list"> <!-- One staff card per person -->
+                    <div class="staff-card"> <img src="assets/billing/Myra desai.png" alt="Myra Desai"
+                            class="staff-image" />
+                        <div class="staff-info">
+                            <p class="staff-name">Myra Desai</p>
+                            <p class="staff-role">Home & Personal Care</p>
+                        </div> <input type="radio" name="staff" value="Myra Desai" />
+                    </div>
+                    <div class="staff-card"> <img src="assets/billing/img8.png" alt="Aarav Jain" class="staff-image" />
+                        <div class="staff-info">
+                            <p class="staff-name">Aarav Jain</p>
+                            <p class="staff-role">Staple Section</p>
+                        </div> <input type="radio" name="staff" value="Aarav Jain" />
+                    </div>
+                    <div class="staff-card"> <img src="assets/billing/Ishita desai.png" alt="Ishita Desai"
+                            class="staff-image" />
+                        <div class="staff-info">
+                            <p class="staff-name">Ishita Desai</p>
+                            <p class="staff-role">Warehouse</p>
+                        </div> <input type="radio" name="staff" value="Ishita Desai" />
+                    </div>
+                    <div class="staff-card"> <img src="assets/billing/Meera gupta.png" alt="Meera Gupta"
+                            class="staff-image" />
+                        <div class="staff-info">
+                            <p class="staff-name">Meera Gupta</p>
+                            <p class="staff-role">Apparel Section</p>
+                        </div> <input type="radio" name="staff" value="Meera Gupta" />
+                    </div>
+                    <div class="staff-card"> <img src="assets/billing/Myra khan.png" alt="Myra Khan"
+                            class="staff-image" />
+                        <div class="staff-info">
+                            <p class="staff-name">Myra Khan</p>
+                            <p class="staff-role">Fruits & Veggies</p>
+                        </div> <input type="radio" name="staff" value="Myra Khan" />
+                    </div>
+                    <div class="staff-card"> <img src="assets/billing/Rohan verma.png" alt="Rohan Verma"
+                            class="staff-image" />
+                        <div class="staff-info">
+                            <p class="staff-name">Rohan Verma</p>
+                            <p class="staff-role">General Merchandise</p>
+                        </div> <input type="radio" name="staff" value="Rohan Verma" />
+                    </div>
+                    <div class="staff-card"> <img src="assets/billing/Sai mehta.png" alt="Sai Mehta"
+                            class="staff-image" />
+                        <div class="staff-info">
+                            <p class="staff-name">Sai Mehta</p>
+                            <p class="staff-role">Food Section</p>
+                        </div> <input type="radio" name="staff" value="Sai Mehta" />
+                    </div>
+                    <div class="staff-card"> <img src="assets/billing/Rohan mehta.png" alt="Rohan Mehta"
+                            class="staff-image" />
+                        <div class="staff-info">
+                            <p class="staff-name">Rohan Mehta</p>
+                            <p class="staff-role">Billing Counter</p>
+                        </div> <input type="radio" name="staff" value="Rohan Mehta" />
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <button class="take-action" id="confirmAllotBtn" style="margin-top: 10px;">Allot</button>
+            </div>
+        </div>
+
+        <div id="alertSentPopup" class="popup-overlay">
+            <div class="popup-container alert-sent-container">
+                <div class="success-icon-container">
+                    <img src="assets/billing/checkmark-circle.png" alt="Success" class="success-icon" />
+                </div>
+                <p class="alert-sent-text">Alert Sent To <span id="staffNameDisplay">Myra Desai</span></p>
+            </div>
+        </div>
+
+
+
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="nav-item message-btn"> <img src="assets/message.svg" alt="Message" />
+                <p>Message</p>
+            </div>
+            <div class="nav-item notification-btn active"> <img src="assets/bell.svg" alt="Notification" />
+                <p>Notification</p>
+            </div>
+            <div class="nav-item home-btn">
+                <div class="home-icon-container"> <img src="assets/Home Icon.svg" alt="Home" /> </div>
+                <p>Home</p>
+            </div>
+            <div class="nav-item todo-btn"> <img src="assets/review.svg" alt="To do list" />
+                <p>To do list</p>
+            </div>
+            <div class="nav-item stats-btn"> <img src="assets/stats-chart.svg" alt="Statistics" />
+                <p>Statistics</p>
+            </div>
+        </div>
+    </div>
+    <script src="notification.js"></script>
+</body>
+
+</html>
